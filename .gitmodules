@@ -1,0 +1,9 @@
+[submodule "micropython"]
+	path = micropython
+	url = https://github.com/micropython/micropython.git
+	shallow = true
+	ignore = dirty
+[submodule "gc9a01_mpy"]
+	path = gc9a01_mpy
+	url = https://github.com/russhughes/gc9a01_mpy.git
+	shallow = true

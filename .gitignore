@@ -1,0 +1,4 @@
+build/
+boards/*/gen/
+tools/
+__pycache__/

@@ -36,8 +36,9 @@ en el firmware.
 probadas; `tools/` se descarga:
 
 ```bash
-git clone --recursive --shallow-submodules https://github.com/psicobyte/micropython-esp8266-gc9a01.git
-cd micropython-esp8266-gc9a01            # o: git submodule update --init --depth 1  (si se clonó sin --recursive)
+git clone https://github.com/psicobyte/micropython-esp8266-gc9a01.git
+cd micropython-esp8266-gc9a01
+git submodule update --init --depth 1     # sin --recursive: eso baja los submódulos de todos los ports (~2 GB)
 mkdir -p tools && curl -L https://micropython.org/resources/xtensa-lx106-elf-standalone.tar.gz \
     | tar xz -C tools && rm tools/xtensa-lx106-elf/bin/esptool.py
 python3 -m venv tools/venv && tools/venv/bin/pip install mpremote esptool
